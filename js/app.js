@@ -2,14 +2,14 @@ let vardas = "joNaS";
 let pavarde = "Petrauskas";
 const asmensKodas = 38507131234;
 
-if(validate(vardas, pavarde)){
+if(validate(vardas, pavarde, asmensKodas)){
     formate(vardas,pavarde);
     let asmensKodasString = asmensKodas.toString();
     century(asmensKodasString)
     birthPlace(asmensKodasString);
 }
 
-function validate(vardas, pavarde){
+function validate(vardas, pavarde, asmensKodas){
     let isValid = true;
     if (vardas.length <= 3){
         console.log('Vardas turi buti ilgesinis nei 3 raides');
@@ -17,6 +17,12 @@ function validate(vardas, pavarde){
     } else if (pavarde.length <= 5){
         console.log('Pavarde turi buti ilgesinis nei 5 raides');
         isValid = false
+    }else if (asmensKodas.toString().length !== 11) {
+        console.log('Asmens kodas turi buti 11 skaitmenu');
+        isValid = false
+    }if (typeof asmensKodas !== 'number' || isNaN(asmensKodas) || !Number.isInteger(asmensKodas)) {
+        console.log('Asmens kodas turi buti skaitmuo');
+        isValid = false;
     }else{
         return isValid;
     }
