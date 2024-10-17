@@ -20,7 +20,7 @@ function validate(vardas, pavarde, asmensKodas){
     }else if (asmensKodas.toString().length !== 11) {
         console.log('Asmens kodas turi buti 11 skaitmenu');
         isValid = false
-    }if (typeof asmensKodas !== 'number' || isNaN(asmensKodas) || !Number.isInteger(asmensKodas)) {
+    }else if (typeof asmensKodas !== 'number' || isNaN(asmensKodas) || !Number.isInteger(asmensKodas)) {
         console.log('Asmens kodas turi buti skaitmuo');
         isValid = false;
     }else{
