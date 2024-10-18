@@ -23,9 +23,9 @@ function validate(vardas, pavarde, asmensKodas){
     }else if (typeof asmensKodas !== 'number' || isNaN(asmensKodas) || !Number.isInteger(asmensKodas)) {
         console.log('Asmens kodas turi buti skaitmuo');
         isValid = false;
-    }else{
-        return isValid;
     }
+    
+    return isValid;
 }
 
 function formate(vardas, pavarde){
