@@ -1,13 +1,15 @@
-let vardas = "joNaS";
-let pavarde = "Petrauskas";
-const asmensKodas = 38507131234;
+(() => {
+    let vardas = "joNaS";
+    let pavarde = "Petrauskas";
+    const asmensKodas = 38507131234;
 
-if(validate(vardas, pavarde, asmensKodas)){
-    formate(vardas,pavarde);
-    let asmensKodasString = asmensKodas.toString();
-    century(asmensKodasString)
-    birthPlace(asmensKodasString);
-}
+    if(validate(vardas, pavarde, asmensKodas)){
+        formate(vardas, pavarde);
+        let asmensKodasString = asmensKodas.toString();
+        century(asmensKodasString);
+        birthPlace(asmensKodasString);
+    }
+})();
 
 function validate(vardas, pavarde, asmensKodas){
     let isValid = true;
